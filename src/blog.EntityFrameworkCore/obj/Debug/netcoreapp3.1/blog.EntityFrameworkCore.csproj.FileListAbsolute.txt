@@ -1,0 +1,14 @@
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.csprojAssemblyReference.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.AssemblyInfoInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.AssemblyInfo.cs
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.EntityFrameworkCore.deps.json
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.EntityFrameworkCore.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.EntityFrameworkCore.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.Domain.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.Domain.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\bin\Debug\netcoreapp3.1\blog.Domain.Shared.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.csproj.CopyComplete
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.EntityFrameworkCore\obj\Debug\netcoreapp3.1\blog.EntityFrameworkCore.pdb

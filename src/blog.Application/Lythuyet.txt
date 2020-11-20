@@ -1,0 +1,76 @@
+﻿
+
+1. Application:
+	- Every module should define a module class; derived from AbpModule
+	- override OnApplicationInitialization method to execute code while application is being starteds
+	- Module dependencies: An Abp module must declare [DependsOn] attribute if it does have a dependency upon another module
+
+				[DependsOn(typeof(AbpAspNetCoreMvcModule))]
+				[DependsOn(typeof(AbpAutofacModule))]
+				public class BlogModule
+				{}
+
+	- Application project has: automapper, appservice, appmodule
+
+2. Application.Contracts:
+	- Application.Contracts project has: Permissions define, contract module(Iappserivce), DTO
+	- Authorization: https://docs.abp.io/en/abp/latest/Authorization
+		+ Authorization system uses IPermissionChecker to check permissions.
+		+ Different modules can have different permissions.
+		+ A module should create a class derived from PermissionDefinitionProvider in order to define it's permissions, and override
+			Define method.
+		+ Trong Define method we will define group-permission and permission-names
+				public class BookStorePermissionDefinitionProvider : PermissionDefinitionProvider
+				{
+					public override void Define(IPermissionDefinitionContext context)
+					{
+						var myGroup = context.AddGroup("BookStore");
+
+						myGroup.AddPermission("BookStore_Author_Create");
+					}
+				}
+		+ Localize: khi ta định nghĩa BookStore: "Book Store Group" trong localization file thì khi hiện trên view sẽ ra tên group là 
+			Book Store Group thay vì BookStore
+				var mygroup = context.AddGroup("BookStore",
+					LocalizableString.Create<BookStoreResource>("BookStore")
+				);
+
+		+ Multi-tenacy: you can define multi-tenancy side option while defining a new permission. 
+			Host: permission available only for the host side
+			Tenant: permission available only for the tenant(cho thue/nguoi o) side
+			both: permission available both for tenant and host
+
+		+ Child Permission: 
+			Editor_management has: Editor_management_createPost, Editor_management_createCategory
+			Then, we use [Authorize("Editor_management")] to authorize an ApplicationService and [Authorize("Editor_management_createPost")]
+			for a method in it
+
+		+ IAuthorizeService use for check authorization, you have to inject it in controller you wanna use, then
+
+				var result = await AuthorizationService.AuthorizeAsync("Editor_management_createPost");
+				if (result.Succeeded == false)
+				{
+					throw new AbpAuthorizationException("...");
+				}
+
+				or await AuthorizationService.CheckAsync("Author_Management_Create_Books");
+
+		+ IPermissionManager, to manage permission for a user (remove/add/update permission for a user)
+
+				public async Task GrantPermissionForUserAsync(Guid userId, string permissionName)
+				{
+					await _permissionManager.SetForUserAsync(userId, permissionName, true);
+				}
+
+				public async Task ProhibitPermissionForUserAsync(Guid userId, string permissionName)
+				{
+					await _permissionManager.SetForUserAsync(userId, permissionName, false);
+				}
+
+3. DbMigrator:
+	- DbMigrator is used to apply existing migrations to a database. DbMigrator can be used to upgrade and downgrade to any given migration.
+	- .DbMigrator is a console application that can be run to migrate the database schema and seed the data on development 
+		and production environments.
+
+
+4. Tạo entity -> seed data -> DTO(dto, createupdatedto) -> Automapper -> IAppService -> AppService -> Tạo View

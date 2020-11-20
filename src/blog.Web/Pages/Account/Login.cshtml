@@ -1,0 +1,45 @@
+﻿@page
+@{
+    Layout = "";
+}
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.Account.Localization
+@using Volo.Abp.Account.Settings
+@using Volo.Abp.Settings
+@model blog.Web.Pages.Account.LoginModel
+@inject IHtmlLocalizer<AccountResource> L
+@inject Volo.Abp.Settings.ISettingProvider SettingProvider
+
+    <abp-style-bundle>
+        <abp-style src="/css/login.css" />
+    </abp-style-bundle>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form">
+            <input type="text" placeholder="name" asp-controller="Administration" asp-action="Register" />
+            <input type="password" placeholder="password" />
+            <input type="text" placeholder="email address" />
+            <button type="submit">create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form" method="post">
+            <input type="text" placeholder="username" asp-for="LoginInput.UserNameOrEmailAddress" />
+            <input type="password" placeholder="password" asp-for="LoginInput.Password" />
+            <input type="checkbox" id="rememberMe" style="float: left; width: 5%; margin-right: 10px;margin-top:5px;" asp-for="LoginInput.RememberMe" />
+            <label for="rememberMe" style="float:left;font-size:15px;">Remember Me?</label>
+            <button type="submit">login</button>
+            <span style="color:red;margin-top:10px;font-size:12px;"></span>
+            <div style="color:red;margin-top:10px;font-size:12px;"></div>
+
+            <p class="message">Not registered? <a asp-controller="Administration" asp-action="Register">Create an account</a></p>
+        </form>
+        <form method="post" style="height:50px;">
+            <button type="submit" asp-page-handler="ExternalLogin" asp-route-provider="Facebook" style="width:45%;float:left;background-color:#087bea;">
+                Facebook
+            </button>
+            <button type="submit" asp-page-handler="ExternalLogin" asp-route-provider="Google" style="width:45%;float:right;background-color:#cb4236">
+                Google
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿@page
+@model blog.Web.Pages.AuthorModel
+@{
+    ViewData["Title"] = "Author";
+}
+
+<h2>Roles List</h2> <br />
+@foreach(var item in Model.ListRoles.Items)
+{
+    <b>@item.Name</b><a class="btn btn-primary" style="margin-left:20px;" asp-page="/Authorize/UpdateRole" asp-route-providerKey="@item.Name" asp-route-providerName="R">Update Permission</a>
+    <br />
+    <br>
+}    

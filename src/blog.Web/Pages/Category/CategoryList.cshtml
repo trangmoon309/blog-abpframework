@@ -1,0 +1,78 @@
+﻿@page
+@model blog.Web.Pages.Category.CategoryListModel
+@inject blog.Category.CategoryService cateService;
+@using blog.Category;
+
+@{
+    ViewData["Title"] = "CategoryList";
+    Layout = "_MyLayout";
+    var categories = Model.CategoryList;
+}
+
+
+@section scripts
+{
+    <abp-script src="/Pages/Category/CategoryList.js" />
+}
+
+@section style
+{
+    <abp-style src="/css/listpost.css" />
+}
+
+
+<div class="container-fluid" style="background-color:#E9FAE0;position:relative;margin-top:8%;padding: 5px 60px;">
+    <img src="https://miro.medium.com/max/3008/1*Z326IB1LmJtbpMwg2LkRdg.gif" style="margin-top: 5%; width: 100%;" />
+    <a asp-page="/Post/PostList" class="text-danger" font-size="15px;">See List Posts</a>
+    @for (int i = 0; i < categories.Count; i++)
+    {
+        <h1 style="text-decoration: underline; color: #557C24; font-weight:800;text-align:center;font-size: 60px;
+">
+            @categories[i].Name
+        </h1>
+        @*@if (signInManager.IsSignedIn(User) && User.HasClaim("Update Category", "true"))
+            {
+                <a asp-controller="Category" asp-action="UpdateCategory" asp-route-cateId="@categories[i].Id ">Update Category</a>
+            }*@
+
+        <a asp-page="/Category/UpdateCategory" asp-route-cateId="@categories[i].Id ">Update Category</a>
+
+        var listOfPostSameCategory = await cateService.GetPostInSameCategory(categories[i].Id);
+        if (listOfPostSameCategory.Count == 0)
+        {
+            <h4>No Post have added to this Category!</h4>
+        }
+        <ul class="blog-list" style="list-style-type:none;margin-bottom:5%;">
+            @for (int j = 0; j < listOfPostSameCategory.Count; j++)
+            {
+                var photoPath = "";
+                if (listOfPostSameCategory[j].PhotoPath == null) photoPath = "/imgs/default.jpg";
+                else
+                {
+                    photoPath = "/imgs/" + listOfPostSameCategory[j].PhotoPath;
+                }
+                <li>
+                    <div class="post">
+                        <a asp-page="/Post/PostDetail" asp-route-postId="@listOfPostSameCategory[j].Id">
+                            <img src="@photoPath" alt="No image" width="70%" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+                        </a>
+                        <a asp-controller="Post" asp-action="PostDetail" asp-route-postId="@listOfPostSameCategory[j].Id">
+
+                            <h1 style="font-size:25px;font-weight:800" class="postTitle">@listOfPostSameCategory[j].Title</h1>
+                        </a>
+                        <h4>@listOfPostSameCategory[j].Author</h4>
+                        <h5>@listOfPostSameCategory[j].Description<span>... </span><i><a style="font-size:14px;" asp-page="/Post/PostDetail" asp-route-postId="@listOfPostSameCategory[j].Id"> View Details</a></i></h5>
+                        <h4>
+                            <i>@listOfPostSameCategory[j].CreatedAt</i>
+                        </h4>
+                        @*@if (signInManager.IsSignedIn(User) && User.HasClaim("Update Post", "true"))
+                            {
+                                <a asp-controller="Post" asp-action="UpdatePost" asp-route-postId="@listOfPostSameCategory[j].Id" class="text-danger" font-size="15px;">Update Post</a>
+                            }*@
+                    </div>
+                </li>
+            }
+        </ul>
+        <hr width="70%">
+    }
+</div>

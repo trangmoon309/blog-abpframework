@@ -1,0 +1,12 @@
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\bin\Release\netcoreapp3.1\blog.Domain.deps.json
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\bin\Release\netcoreapp3.1\blog.Domain.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\bin\Release\netcoreapp3.1\blog.Domain.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\bin\Release\netcoreapp3.1\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\bin\Release\netcoreapp3.1\blog.Domain.Shared.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.csprojAssemblyReference.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.AssemblyInfoInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.AssemblyInfo.cs
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.csproj.CoreCompileInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.csproj.CopyComplete
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain\obj\Release\netcoreapp3.1\blog.Domain.pdb

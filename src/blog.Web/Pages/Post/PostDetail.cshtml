@@ -1,0 +1,53 @@
+﻿@page
+@model blog.Web.Pages.Post.PostDetailModel
+@{
+    ViewData["Title"] = "PostDetail";
+
+}
+
+@{
+    var categoryName = Model.CategoryName;
+    var postLists = Model.PostList;
+    var spePost = Model.SpecificPost;
+    var imgFile = "../imgs/" + spePost.PhotoPath;
+}
+
+@section styles
+{
+    <abp-style src="/css/postdetail.css" />
+}
+
+<div class="main container-fluid" style="background-color:white;position:relative;">
+    <h5>@categoryName</h5>
+    <h2>@spePost.Title</h2>
+    <a href="http://ahmetaksungur.com/" class="authorlink" style="padding-bottom:20px;">@spePost.Author</a>
+    <content class="pl-0 col-md-7 fl" style="transform: translateX(20px);">
+        <img src="@imgFile" style="display:block; margin: auto auto" />
+        <p style="margin-top:20px;font-size:21px;">
+            @spePost.Content
+        </p>
+
+    </content>
+    <sidebar class="col-md-5 fl pr-0" style=" transform: translateX(-10px); ">
+
+        <h2>Highlights</h2>
+        @for (int i = 0; i < postLists.Count; i++)
+        {
+            if (postLists[i].Id != spePost.Id && postLists[i].CategoryId == spePost.CategoryId)
+            {
+                var photoPath = "../imgs/" + postLists[i].PhotoPath;
+                <div class="post__card-2">
+                    <div class="post__card_-2">
+                        <div class="post__card_meta-2" style="padding: 20px;">
+                            <a asp-page="/Post/PostDetail" asp-route-postId="@postLists[i].Id" style="color:black;">
+                                <p class="post__card_title-2">@postLists[i].Title</p>
+                            </a>
+                            <p class="post__card_alttitle-2">@postLists[i].Author</p>
+                        </div>
+                        <div class="post__card__image-2" style="background-image: url('@photoPath');">
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+</div>

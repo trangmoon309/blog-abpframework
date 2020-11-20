@@ -1,0 +1,12 @@
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\bin\Debug\netstandard2.0\blog.Application.Contracts.deps.json
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\bin\Debug\netstandard2.0\blog.Application.Contracts.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\bin\Debug\netstandard2.0\blog.Application.Contracts.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\bin\Debug\netstandard2.0\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\bin\Debug\netstandard2.0\blog.Domain.Shared.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.csprojAssemblyReference.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.AssemblyInfoInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.AssemblyInfo.cs
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.csproj.CopyComplete
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Application.Contracts\obj\Debug\netstandard2.0\blog.Application.Contracts.csproj.CoreCompileInputs.cache

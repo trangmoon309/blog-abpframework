@@ -1,0 +1,125 @@
+﻿@page
+@model blog.Web.Pages.Account.ManageProfileModel
+@{
+    ViewData["Title"] = "ManageProfile";
+    Layout = "_MyLayout";
+}
+
+
+<div class="container" style="    background-color: white;
+        padding: 50px;
+        padding-bottom: 20px;
+        transform: translateY(10%);
+        margin-top: 4%;
+        margin-bottom: 14%;
+    ">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--left col-->
+            <div class="text-center">
+                <img src="~/imgs/me.jpg" class="avatar img-circle img-thumbnail" alt="avatar" id="blah">
+                <h1 style="font-size: 1.5rem">@Model.userDto.Name</h1>
+            </div>
+
+        </div><!--/col-3-->
+        <div class="col-sm-9">
+            <ul class="nav nav-tabs" style="margin-bottom:30px;">
+                <li class="active"><a data-toggle="tab" href="#home">Profile</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <form class="form" method="post" id="registrationForm" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="first_name"><h6>User Name</h6></label>
+                                <input type="text" class="form-control" id="first_name" asp-for="@Model.userDto.UserName" placeholder="User Name" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="first_name"><h6>Name</h6></label>
+                                <input type="text" class="form-control" id="first_name" asp-for="@Model.userDto.Name" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="phone"><h6>Phone Number</h6></label>
+                                <input type="text" class="form-control" id="phone" asp-for="@Model.userDto.PhoneNumber" placeholder="Phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="role"><h6>Roles:</h6></label>
+                                <select type="text" class="form-control" id="role" asp-for="UpdateUserRole">
+                                    @for (int i = 0; i < @Model.RoleLists.Count(); i++)
+                                    {
+                                        <option value="@Model.RoleLists[i].Name">@Model.RoleLists[i].Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="email"><h6>Email</h6></label>
+                                <input type="email" class="form-control" id="email" asp-for="@Model.userDto.Email" placeholder="you@email.com">
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+
+            <div class="col-xs-6">
+                <label for="role"><h6>Roles:</h6></label>
+                <select type="text" class="form-control" id="role" asp-for="@Model.userDto.RoleName" value="@Model.RoleName">
+                    @for (int i = 0; i < roleList.Count; i++)
+                    {
+                        <option value="@roleList[i].Name">@roleList[i].Name</option>
+                    }
+                </select>
+            </div>
+        </div>*@
+                        <h4>Change password</h4>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="password"><h6>New password(optional)</h6></label>
+                                <input class="form-control" type="password" id="password" asp-for="@Model.newPassword" autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="password2"><h6>Confirm password</h6></label>
+                                <input type="password" class="form-control" asp-for="@Model.newPasswordConfirm" id="password2" placeholder="confirm new password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <br>
+                                <input type="hidden" asp-for="@Model.userDto.Id" />
+                                <input type="hidden" asp-for="@Model.UserRole" />
+                                <button class="btn btn btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Lưu thay đổi</button>
+                                @*@if (ViewBag.IsSuccess != null && ViewBag.IsSuccess == true)
+        {
+            <span class="text-success">Update Successful!</span>
+        }*@
+                            </div>
+                        </div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </form>
+                    <hr>
+                </div><!--/tab-pane-->
+            </div><!--/tab-content-->
+        </div><!--/col-9-->
+    </div><!--/row-->
+</div>
+

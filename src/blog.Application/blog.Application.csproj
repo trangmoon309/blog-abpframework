@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>blog</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\blog.Domain\blog.Domain.csproj" />
+    <ProjectReference Include="..\blog.Application.Contracts\blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\blog.EntityFrameworkCore.DbMigrations\blog.EntityFrameworkCore.DbMigrations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp.AutoMapper" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="3.3.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

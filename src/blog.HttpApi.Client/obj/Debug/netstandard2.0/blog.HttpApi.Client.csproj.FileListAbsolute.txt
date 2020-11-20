@@ -1,0 +1,14 @@
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.HttpApi.Client.deps.json
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.HttpApi.Client.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.HttpApi.Client.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.Application.Contracts.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.Application.Contracts.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\bin\Debug\netstandard2.0\blog.Domain.Shared.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.csprojAssemblyReference.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.AssemblyInfoInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.AssemblyInfo.cs
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.csproj.CoreCompileInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.csproj.CopyComplete
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.HttpApi.Client\obj\Debug\netstandard2.0\blog.HttpApi.Client.pdb

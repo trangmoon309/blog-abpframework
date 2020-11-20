@@ -1,0 +1,10 @@
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\bin\Release\netstandard2.0\blog.Domain.Shared.deps.json
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\bin\Release\netstandard2.0\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\bin\Release\netstandard2.0\blog.Domain.Shared.pdb
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.csprojAssemblyReference.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.EmbeddedFilesManifest.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.AssemblyInfoInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.AssemblyInfo.cs
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.csproj.CoreCompileInputs.cache
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.dll
+D:\Self-learning\(3).C#\Thực tập\Blog-abp\blog-abp\test\src\blog.Domain.Shared\obj\Release\netstandard2.0\blog.Domain.Shared.pdb

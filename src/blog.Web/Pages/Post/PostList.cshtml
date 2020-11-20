@@ -1,0 +1,46 @@
+﻿@page
+@model blog.Web.Pages.Post.PostListModel
+@{
+    ViewData["Title"] = "List of Post";
+    Layout = "_MyLayout";
+    var posts = Model.PostList;
+}
+
+@section style
+{
+    <abp-style src="/css/listpost.css" />
+}
+
+<div class="container-fluid" style="position:relative">
+    <ul class="blog-list" style="margin-top: 10%; list-style-type:none ">
+        @for (int i = 0; i < Model.PostList.Count(); i++)
+        {
+            var photoPath = "";
+            if (posts[i].PhotoPath == null) photoPath = "/imgs/default.jpg";
+            else
+            {
+                photoPath = "/imgs/" + posts[i].PhotoPath;
+            }
+            <li>
+                <div class="post">
+                    <img src="@photoPath" alt="No image" width="100%" />
+                    <h1 style="font-size:25px;font-weight:800">
+                        <a asp-page="/Post/PostDetail" asp-route-postId="@posts[i].Id">
+                            @posts[i].Title
+                        </a>
+                    </h1>
+                    <a asp-page="/Post/UpdatePost" asp-route-postId="@posts[i].Id">Update Post</a>
+                    <h4>@posts[i].Author</h4>
+                    <h5>@posts[i].Description<span>... </span><i><a style="font-size:14px;" asp-page="/Post/PostDetail" asp-route-postId="@posts[i].Id" > View Details</a></i></h5>
+                    <h4>
+                        <i>@posts[i].CreatedAt</i>
+                    </h4>
+                    @*@if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Post" asp-action="UpdatePost" asp-route-postId="@posts[i].Id" class="text-danger" font-size="15px;">Update Post</a>
+                    }*@
+                </div>
+            </li>
+        }
+    </ul>
+</div>

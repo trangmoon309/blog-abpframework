@@ -1,0 +1,70 @@
+﻿
+@inject Volo.Abp.Users.ICurrentUser CurrentUser;
+@using Microsoft.AspNetCore.Authorization;
+@inject IAuthorizationService authService;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog_project ABP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <abp-style-bundle>
+        <abp-style src="/css/homepage.css" />
+        <abp-style src="/libs/bootstrap/css/bootstrap.css" />
+        <abp-style src="/libs/bootstrap/css/bootstrap.min.css" />
+    </abp-style-bundle>
+    @RenderSection("style", required: false)
+
+</head>
+<body style="height:100%">
+    <header>
+        <nav>
+            <div class="logo">
+                <a asp-controller="Home" asp-action="HomePage" style="text-decoration:none; color:white">
+                    <h1 style="font-size:30px;">Green Global <span> | blog</span></h1>
+                </a>
+            </div>
+            <ul class="pages">
+                <li><a style="color: white; text-decoration:none" asp-page="/Home/HomePage">Home Page</a></li>
+                <li onclick="runActive()"><a style="color: white; text-decoration:none" asp-page="/Category/CategoryList">Category List</a></li>
+                <li><a style="color: white; text-decoration:none" asp-page="/Post/CreatePost">Create Post</a></li>
+                @if (await authService.IsGrantedAsync("blogproject.Category.Create"))
+                {
+                    <li><a style="color: white; text-decoration:none" asp-page="/Category/CreateCategory">Create Category</a></li>
+                }
+                <li><a style="color: white; text-decoration:none" asp-page="/Account/ManageProfile" asp-route-userId="@CurrentUser.Id">User</a></li>
+                @if (CurrentUser.IsInRole("admin"))
+                {
+                    <li><a style="color: white; text-decoration:none" asp-page="/Authorize/Author">Manage Role</a></li>
+                }
+            </ul>
+            @if (!CurrentUser.IsAuthenticated)
+            {
+                <a style="color: #80B861;text-decoration:none;height: 39px; background: white;border-radius: 20px;padding: 3px 20px;font-size: 20px;font-weight: 600;" asp-page="/Account/Login">Login</a>
+            }
+            else
+            {
+                <form asp-page="/Account/Logout" method="post">
+                    <button class="logout" type="submit">Logout</button>
+                </form>
+            }
+        </nav>
+    </header>
+    <!-- MIDDLE CONTENT -->
+    @RenderBody()
+    <!-- FOLLOW  || DO NOT INCLUDE-->
+    <a class="Follow" href="https://www.facebook.com/trangmoon309" target="blank_"></a>
+    <abp-script-bundle>
+        <abp-script src="/libs/jquery/jquery.js" />
+        <abp-script src="/libs/jquery-validation/jquery.validate.js" />
+        <abp-script src="/libs/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
+        <abp-script src="/libs/bootstrap/js/bootstrap.bundle.js" />
+        <abp-script src="/libs/bootstrap/js/bootstrap.bundle.min.js" />
+    </abp-script-bundle>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
